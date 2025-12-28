@@ -118,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,7 +129,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -197,12 +197,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 151
-        width: 24
-        height: 47
+        x: 0
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 151
-        width: 30
-        height: 32
+        x: 46
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 151
-        width: 31
-        height: 46
+        x: 92
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,12 +263,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 100
-        width: 26
-        height: 51
+        x: 138
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,12 +285,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_4
       rect:
         serializedVersion: 2
-        x: 145
-        y: 151
-        width: 35
-        height: 46
+        x: 184
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_5
       rect:
         serializedVersion: 2
-        x: 146
-        y: 100
-        width: 33
-        height: 51
+        x: 230
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 151
-        width: 31
-        height: 46
+        x: 276
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_7
       rect:
         serializedVersion: 2
-        x: 193
-        y: 100
-        width: 28
-        height: 51
+        x: 322
+        y: 150
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -373,12 +373,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_8
       rect:
         serializedVersion: 2
-        x: 238
-        y: 151
-        width: 31
-        height: 46
+        x: 0
+        y: 100
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -395,12 +395,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_9
       rect:
         serializedVersion: 2
-        x: 239
+        x: 46
         y: 100
-        width: 25
-        height: 51
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -417,12 +417,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_10
       rect:
         serializedVersion: 2
-        x: 286
-        y: 150
-        width: 24
-        height: 48
+        x: 92
+        y: 100
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -439,12 +439,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_11
       rect:
         serializedVersion: 2
-        x: 333
-        y: 151
-        width: 23
-        height: 46
+        x: 138
+        y: 100
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -461,12 +461,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_12
       rect:
         serializedVersion: 2
-        x: 7
+        x: 184
         y: 100
-        width: 32
-        height: 43
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -483,12 +483,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_13
       rect:
         serializedVersion: 2
-        x: 53
-        y: 101
-        width: 31
-        height: 34
+        x: 230
+        y: 100
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -505,12 +505,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_14
       rect:
         serializedVersion: 2
-        x: 4
-        y: 57
-        width: 41
-        height: 31
+        x: 0
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -527,12 +527,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_15
       rect:
         serializedVersion: 2
-        x: 51
-        y: 51
-        width: 41
-        height: 20
+        x: 46
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -549,12 +549,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_16
       rect:
         serializedVersion: 2
-        x: 97
-        y: 51
-        width: 30
-        height: 37
+        x: 92
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -571,12 +571,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_17
       rect:
         serializedVersion: 2
-        x: 142
-        y: 51
-        width: 39
-        height: 37
+        x: 138
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -593,12 +593,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_18
       rect:
         serializedVersion: 2
-        x: 189
-        y: 51
-        width: 34
-        height: 37
+        x: 184
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -615,12 +615,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_19
       rect:
         serializedVersion: 2
-        x: 235
-        y: 51
-        width: 30
-        height: 37
+        x: 230
+        y: 50
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,12 +637,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_20
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 36
-        height: 40
+        x: 0
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,12 +659,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_21
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1
-        width: 38
-        height: 39
+        x: 46
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,12 +681,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_22
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1
-        width: 34
-        height: 40
+        x: 92
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -703,12 +703,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_23
       rect:
         serializedVersion: 2
-        x: 149
-        y: 1
-        width: 25
-        height: 40
+        x: 138
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,12 +725,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_24
       rect:
         serializedVersion: 2
-        x: 188
-        y: 1
-        width: 35
-        height: 40
+        x: 184
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -747,12 +747,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_25
       rect:
         serializedVersion: 2
-        x: 231
-        y: 1
-        width: 39
-        height: 39
+        x: 230
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -769,12 +769,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_26
       rect:
         serializedVersion: 2
-        x: 284
-        y: 1
-        width: 29
-        height: 40
+        x: 276
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -791,12 +791,12 @@ TextureImporter:
       name: f4bef3f5-accb-4714-9ab8-4d607c0ee283_27
       rect:
         serializedVersion: 2
-        x: 332
-        y: 1
-        width: 26
-        height: 40
+        x: 322
+        y: 0
+        width: 46
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -813,7 +813,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db9742adc7ba7ed3ab95f8b43fe1c3e0
     internalID: 0
     vertices: []
     indices: 
@@ -821,7 +821,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":4.0},"gridSpriteSize":{"x":46.0,"y":50.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       f4bef3f5-accb-4714-9ab8-4d607c0ee283_0: -3496855430413410738
       f4bef3f5-accb-4714-9ab8-4d607c0ee283_1: -7873184554131601525
