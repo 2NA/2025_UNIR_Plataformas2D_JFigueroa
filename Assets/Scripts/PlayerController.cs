@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,7 +32,19 @@ public class PlayerController : MovementController
 
         if (Keyboard.current.rightAltKey.wasPressedThisFrame)
         {
-            mustPunch = true;
-        }
+            PerformPunch();
+        } 
+    }
+
+    public override void NotifyHit(HitBox2D hitBox2D)
+    {
+        Debug.Log("Este es el NotifyHit de la clase derivada");
+        gameObject.SetActive(false);
+        Invoke(nameof(ActivatePlayer), 3f);
+    }
+
+    private void ActivatePlayer()
+    {
+        gameObject.SetActive(true);
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyInstantiator : MonoBehaviour
 {
+    [SerializeField] Transform player;
+
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float timeBetweenEnemyInstantiations = 5f;
 
@@ -16,7 +18,10 @@ public class EnemyInstantiator : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity); //Instanciamos enemigo
+            GameObject newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity); //Instanciamos enemigo
+            EnemyController enemyController = newEnemy.GetComponent<EnemyController>();
+            enemyController.player = player;
+        
             yield return new WaitForSeconds(timeBetweenInstantiations);
         }
     }
