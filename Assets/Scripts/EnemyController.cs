@@ -10,30 +10,42 @@ public class EnemyController : MovementController
     float lastPunchTime;
     protected override void Update()
     {
-        if (player.position.x < transform.position.x)
-        {
-            desiredMove = Vector2.left;
-        } else
-        {
-            desiredMove = Vector2.right;
-        }
+        RunToPlayer();
 
         if (player.gameObject.activeSelf)
         {
-            if (MathF.Abs(player.position.x - transform.position.x) < distanceToPunch)
-            {
-                desiredMove = Vector2.zero;
-                if (Time.time - lastPunchTime > timeBetweenPunches)
-                {
-                    PerformPunch();
-                    lastPunchTime = Time.time;
-                }
-            }   
-        } else
+            CheckAndPerformPunch();
+        }
+        else
         {
             desiredMove.x *= -1f;
-        }      
+        }
 
         base.Update();
+    }
+
+    private void CheckAndPerformPunch()
+    {
+        if (MathF.Abs(player.position.x - transform.position.x) < distanceToPunch)
+        {
+            desiredMove = Vector2.zero;
+            if (Time.time - lastPunchTime > timeBetweenPunches)
+            {
+                PerformPunch();
+                lastPunchTime = Time.time;
+            }
+        }
+    }
+
+    protected virtual void RunToPlayer()
+    {
+        if (player.position.x < transform.position.x)
+        {
+            desiredMove = Vector2.left;
+        }
+        else
+        {
+            desiredMove = Vector2.right;
+        }
     }
 }

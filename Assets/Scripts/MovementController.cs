@@ -14,7 +14,7 @@ public class MovementController : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    void Awake()
+    protected virtual void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
