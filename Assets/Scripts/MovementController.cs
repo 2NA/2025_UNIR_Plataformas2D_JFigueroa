@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] float walkSpeed = 2f;
+    [SerializeField] float runSpeed = 3f;
     [SerializeField] float jumpSpeed = 3f;
 
     [Header("Combat Settings")]
@@ -22,18 +24,32 @@ public class MovementController : MonoBehaviour
     }
 
     protected Vector2 desiredMove = Vector2.zero;
+    protected bool mustRun = false;
     protected bool mustJump = false;
     protected bool mustPunch = false;
+    protected float actualWalkSpeed = 2f;
     protected virtual void Update()
     {
-        rb2D.linearVelocityX = desiredMove.x * walkSpeed;
+        rb2D.linearVelocityX = desiredMove.x * actualWalkSpeed;
 
         if (desiredMove.x != 0f)
         {
-            animator.SetBool("IsWalking", true);
+            if (mustRun)
+            {
+                animator.SetBool("IsRunning", true);
+                animator.SetBool("IsWalking", false);
+                actualWalkSpeed = runSpeed;
+            } else
+            {
+                animator.SetBool("IsWalking", true);
+                animator.SetBool("IsRunning", false);
+                actualWalkSpeed = walkSpeed;
+            }
         } else
         {
             animator.SetBool("IsWalking", false);
+            animator.SetBool("IsRunning", false);
+            actualWalkSpeed = walkSpeed;
         }
 
         if (desiredMove.x < 0)

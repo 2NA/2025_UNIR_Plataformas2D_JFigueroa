@@ -1,9 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MovementController
 {
+    [Header("Player Movement Settings")]
+    [SerializeField] Transform feet;
+    [SerializeField] float groundDistance = 0.15f;
+    [SerializeField] LayerMask jumpable;
+    [SerializeField] bool hasDoubleJump = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -16,6 +23,12 @@ public class PlayerController : MovementController
         base.Update();
     }
 
+    private bool OnTheGround()
+    {
+        return Physics2D.Raycast(feet.position, Vector3.down, groundDistance, jumpable);
+    }
+
+    private bool canDoubleJump = false; 
     private void UpdateRawMove()
     {
         Vector2 rawMove = Vector2.zero;
@@ -30,9 +43,24 @@ public class PlayerController : MovementController
 
         desiredMove = rawMove;
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.shiftKey.wasPressedThisFrame)
+        {
+            mustRun = true;
+        }
+
+        if (Keyboard.current.shiftKey.wasReleasedThisFrame)
+        {
+            mustRun = false;
+        }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && (OnTheGround() || canDoubleJump))
         {
             mustJump = true;
+
+            if (hasDoubleJump)
+            {
+                canDoubleJump = !canDoubleJump;
+            }
         }
 
         if (Keyboard.current.rightAltKey.wasPressedThisFrame)
