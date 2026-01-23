@@ -14,15 +14,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.801
+      value: 3.803
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.334
+      value: -1.304
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2650612575564343681, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_Controller
@@ -111,6 +123,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4170959410267097352}
+    - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7153193575703395068}
   m_SourcePrefab: {fileID: 100100000, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
 --- !u!4 &1752792478534195828 stripped
 Transform:
@@ -159,3 +174,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
   affectedTag: Player
+  damage: 20
+--- !u!114 &7153193575703395068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537848944966730690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10e060d5ac7e655c817a955dee3f2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 60

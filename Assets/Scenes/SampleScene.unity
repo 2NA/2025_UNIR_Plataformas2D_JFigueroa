@@ -91832,6 +91832,7 @@ GameObject:
   - component: {fileID: 448273893}
   - component: {fileID: 448273892}
   - component: {fileID: 448273894}
+  - component: {fileID: 448273895}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -91848,7 +91849,7 @@ Transform:
   m_GameObject: {fileID: 448273885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.372, y: -1.165, z: 0}
+  m_LocalPosition: {x: 11.32, y: -0.762, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -92040,6 +92041,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
   affectedTag: Item
+  damage: 10
+--- !u!114 &448273895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448273885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10e060d5ac7e655c817a955dee3f2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 100
 --- !u!1 &466340709
 GameObject:
   m_ObjectHideFlags: 0
@@ -92231,7 +92246,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07782, y: -0.96653485, z: -3.98}
+  m_LocalPosition: {x: 12.025819, y: -0.56353486, z: -3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -92609,7 +92624,7 @@ Transform:
   m_GameObject: {fileID: 687994931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07782, y: -0.96653485, z: -3.98}
+  m_LocalPosition: {x: 12.025819, y: -0.56353486, z: -3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95483,6 +95498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
   affectedTag: Enemy
+  damage: 10
 --- !u!4 &1378763574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3624180871633378418, guid: bee28df960ba69a1191ea11651c17d05, type: 3}
@@ -95650,18 +95666,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.803
       objectReference: {fileID: 0}
@@ -95700,10 +95704,6 @@ PrefabInstance:
     - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113523009958242647, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6537848944966730690, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
       propertyPath: m_Name
@@ -143422,18 +143422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BirdEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6230546153330366460, guid: 5697c93e86bff471da8c74e17ab8b2ed, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7021101224582401701, guid: 5697c93e86bff471da8c74e17ab8b2ed, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 448273887}
-    - target: {fileID: 7021101224582401701, guid: 5697c93e86bff471da8c74e17ab8b2ed, type: 3}
-      propertyPath: distanceToPunch
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 7021101224582401701, guid: 5697c93e86bff471da8c74e17ab8b2ed, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 

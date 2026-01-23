@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.371
+      value: 1.508
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.674
+      value: 0.655
       objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: 1dfb1262ce4447f53802042938b836fa, type: 2}
     - target: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_Name
-      value: EnemyWithSight Variant
+      value: LeafEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3595632570925672622, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_Sprite
@@ -95,6 +95,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8405645963342235877}
+    - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2521710502861374694}
+    - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9137500351684846699}
   m_SourcePrefab: {fileID: 100100000, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
 --- !u!4 &1752792478534195828 stripped
 Transform:
@@ -140,3 +146,30 @@ MonoBehaviour:
   distanceToPunch: 0.25
   timeBetweenPunches: 1
   player: {fileID: 0}
+--- !u!114 &2521710502861374694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537848944966730690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10e060d5ac7e655c817a955dee3f2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 30
+--- !u!114 &9137500351684846699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537848944966730690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b80932a49c22fd988ab58f31d54312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
+  affectedTag: Player
+  damage: 10

@@ -91,6 +91,7 @@ public class MovementController : MonoBehaviour
     public virtual void NotifyHit(HitBox2D hitBox2D)
     {
         Debug.Log("hit");
-        Destroy(gameObject);
+        HealthController health = gameObject.GetComponent<HealthController>();
+        health.GetDamage(hitBox2D.damage);
     }
 }

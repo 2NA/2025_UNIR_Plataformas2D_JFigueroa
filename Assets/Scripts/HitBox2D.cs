@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class HitBox2D : MonoBehaviour
 {
-    [SerializeField] string affectedTag = "Enemy";
+    [SerializeField] private string affectedTag = "Enemy";
+    [SerializeField] public float damage = 10f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

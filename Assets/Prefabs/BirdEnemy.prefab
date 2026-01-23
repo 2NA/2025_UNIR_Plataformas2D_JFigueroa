@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7243544314898924578, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7930556170490455429, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalScale.x
@@ -120,6 +120,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7021101224582401701}
+    - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6131645462862996138}
+    - targetCorrespondingSourceObject: {fileID: 3235501327949495347, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5337393690014857427}
   m_SourcePrefab: {fileID: 100100000, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
 --- !u!1 &2168389532964941805 stripped
 GameObject:
@@ -143,7 +149,7 @@ MonoBehaviour:
   jumpSpeed: 3
   punchHit: {fileID: 6701245519809394267}
   punchHitDuration: 0.25
-  distanceToPunch: 0.25
+  distanceToPunch: 0.05
   timeBetweenPunches: 1
   player: {fileID: 0}
   distanceTolerance: 0.1
@@ -153,6 +159,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &6131645462862996138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168389532964941805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10e060d5ac7e655c817a955dee3f2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 40
+--- !u!114 &5337393690014857427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168389532964941805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b80932a49c22fd988ab58f31d54312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
+  affectedTag: Player
+  damage: 20
 --- !u!4 &6701245519809394267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7930556170490455429, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
