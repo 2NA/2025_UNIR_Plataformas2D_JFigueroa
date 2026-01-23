@@ -79,6 +79,7 @@ public class PlayerController : MovementController
 
     public override void NotifyHit(HitBox2D hitBox2D)
     {
+        Debug.Log("Me han dado");
         gameObject.SetActive(false);
         Invoke(nameof(ActivatePlayer), 3f);
     }
@@ -86,6 +87,20 @@ public class PlayerController : MovementController
     private void ActivatePlayer()
     {
         gameObject.SetActive(true);
+    }
+
+    public void CollectItem(string itemType)
+    {
+        Debug.Log($"{itemType} collected");
+
+        switch(itemType)
+        {
+            case "Double Jump":
+                {
+                    hasDoubleJump = true;
+                    break;
+                }
+        }
     }
 
     #region Callbacks

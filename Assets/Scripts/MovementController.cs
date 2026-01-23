@@ -12,7 +12,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] Transform punchHit;
     [SerializeField] float punchHitDuration = 0.25f;
 
-    Rigidbody2D rb2D;
+    protected Rigidbody2D rb2D;
     Animator animator;
     SpriteRenderer spriteRenderer;
 
@@ -90,6 +90,7 @@ public class MovementController : MonoBehaviour
 
     public virtual void NotifyHit(HitBox2D hitBox2D)
     {
+        Debug.Log("hit");
         Destroy(gameObject);
     }
 }

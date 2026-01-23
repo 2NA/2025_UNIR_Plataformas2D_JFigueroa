@@ -92204,7 +92204,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 28
+  field of view: 42
   orthographic: 0
   orthographic size: 1.2571858
   m_Depth: -1
@@ -92231,7 +92231,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07782, y: -0.96653485, z: -3.98}
+  m_LocalPosition: {x: 6.5733504, y: -0.8271995, z: -4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -92538,7 +92538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
-  CameraDistance: 3.98
+  CameraDistance: 4.4
   DeadZoneDepth: 0
   Composition:
     ScreenPosition: {x: -0.2, y: 0.1}
@@ -92547,14 +92547,14 @@ MonoBehaviour:
       Size: {x: 0.2, y: 0.2}
     HardLimits:
       Enabled: 0
-      Size: {x: 0.8, y: 0.8}
-      Offset: {x: 0, y: 0}
+      Size: {x: 1.14, y: 0.68}
+      Offset: {x: 0.08, y: 0.18}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
   Damping: {x: 1, y: 1, z: 1}
   Lookahead:
-    Enabled: 0
-    Time: 0
+    Enabled: 1
+    Time: 0.482
     Smoothing: 0
     IgnoreY: 0
 --- !u!114 &687994933
@@ -92581,7 +92581,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 28
+    FieldOfView: 42
     OrthographicSize: 1.2571858
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -92609,7 +92609,7 @@ Transform:
   m_GameObject: {fileID: 687994931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07782, y: -0.96653485, z: -3.98}
+  m_LocalPosition: {x: 6.5733504, y: -0.8271995, z: -4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95721,6 +95721,10 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 199128554}
+    - target: {fileID: 9118793035714284039, guid: bdc74fa8bfd06657083e272c7ea431e8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

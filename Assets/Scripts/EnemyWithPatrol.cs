@@ -38,6 +38,8 @@ public class EnemyWithPatrol : EnemyController
         }
 
         base.Update();
+
+        rb2D.linearVelocityY = desiredMove.y * actualWalkSpeed;
     }
 
     private void SetNewDestination()
