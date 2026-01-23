@@ -4,7 +4,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] float walkSpeed = 2f;
+    [SerializeField] float walkSpeed = 1f;
     [SerializeField] float runSpeed = 3f;
     [SerializeField] float jumpSpeed = 3f;
 

@@ -11,17 +11,35 @@ public class EnemyWithSight : EnemyController
         sight2D = GetComponent<Sight2D>();
     }
 
-    protected override void RunToPlayer()
+    protected override void Update()
+    {
+        DetectPlayer();
+
+        base.Update();
+    }
+    
+    private void DetectPlayer()
     {
         bool playerDetected = sight2D.isPlayerInSight();
         
         if (playerDetected)
         {
-            base.RunToPlayer();
+            RunToPlayer();
         } 
         else
         {
             desiredMove = Vector2.zero;
+        }
+    }
+    protected virtual void RunToPlayer()
+    {
+        if (player.position.x < transform.position.x)
+        {
+            desiredMove = Vector2.left;
+        }
+        else
+        {
+            desiredMove = Vector2.right;
         }
     }
 }

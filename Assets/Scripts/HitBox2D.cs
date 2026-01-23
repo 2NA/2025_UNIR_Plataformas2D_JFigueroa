@@ -8,7 +8,7 @@ public class HitBox2D : MonoBehaviour
     {
         if (collision.CompareTag(affectedTag))
         {
-            Debug.Log(affectedTag);
+            // Debug.Log(affectedTag);
             MovementController movementController = collision.GetComponent<MovementController>();
             movementController.NotifyHit(this);
         }

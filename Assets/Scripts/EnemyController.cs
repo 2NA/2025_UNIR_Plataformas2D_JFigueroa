@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MovementController
 {    
+    [Header("Enemy Settings")]
     [SerializeField] float distanceToPunch = 0.25f;
     [SerializeField] float timeBetweenPunches = 1f;
     public Transform player;
@@ -10,7 +11,7 @@ public class EnemyController : MovementController
     float lastPunchTime;
     protected override void Update()
     {
-        RunToPlayer();
+        //RunToPlayer();
 
         if (player.gameObject.activeSelf)
         {
@@ -37,15 +38,4 @@ public class EnemyController : MovementController
         }
     }
 
-    protected virtual void RunToPlayer()
-    {
-        if (player.position.x < transform.position.x)
-        {
-            desiredMove = Vector2.left;
-        }
-        else
-        {
-            desiredMove = Vector2.right;
-        }
-    }
 }

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MovementController
 {
@@ -11,9 +12,51 @@ public class PlayerController : MovementController
     [SerializeField] LayerMask jumpable;
     [SerializeField] bool hasDoubleJump = false;
 
+    [Header("Controls")]
+    [SerializeField] InputActionReference move;
+    [SerializeField] InputActionReference jump;
+    [SerializeField] InputActionReference run;
+    [SerializeField] InputActionReference attack;
+
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    private void OnEnable()
+    {
+        move.action.Enable();
+        move.action.started += OnMove;
+        move.action.performed += OnMove;
+        move.action.canceled += OnMove;
+
+        jump.action.Enable();
+        jump.action.performed += OnJump;
+
+        attack.action.Enable();
+        attack.action.performed += OnAttack;
+        
+        run.action.Enable();
+        run.action.performed += OnRun;
+        run.action.canceled += OnRunCanceled;
+    }
+    
+    private void OnDisable()
+    {
+        move.action.Disable();
+        move.action.started -= OnMove;
+        move.action.performed -= OnMove;
+        move.action.canceled -= OnMove;
+
+        jump.action.Disable();
+        jump.action.performed -= OnJump;
+
+        attack.action.Disable();
+        attack.action.performed -= OnAttack;
+
+        run.action.Disable();
+        run.action.performed -= OnRun;
+        run.action.canceled -= OnRunCanceled;
     }
 
     protected override void Update()
@@ -30,43 +73,8 @@ public class PlayerController : MovementController
 
     private bool canDoubleJump = false; 
     private void UpdateRawMove()
-    {
-        Vector2 rawMove = Vector2.zero;
-
-        if (Keyboard.current.aKey.isPressed)
-        {
-            rawMove += Vector2.left;
-        } else if (Keyboard.current.dKey.isPressed)
-        {
-            rawMove += Vector2.right;
-        }
-
-        desiredMove = rawMove;
-
-        if (Keyboard.current.shiftKey.wasPressedThisFrame)
-        {
-            mustRun = true;
-        }
-
-        if (Keyboard.current.shiftKey.wasReleasedThisFrame)
-        {
-            mustRun = false;
-        }
-
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && (OnTheGround() || canDoubleJump))
-        {
-            mustJump = true;
-
-            if (hasDoubleJump)
-            {
-                canDoubleJump = !canDoubleJump;
-            }
-        }
-
-        if (Keyboard.current.rightAltKey.wasPressedThisFrame)
-        {
-            PerformPunch();
-        } 
+    {     
+        desiredMove = rawMove;      
     }
 
     public override void NotifyHit(HitBox2D hitBox2D)
@@ -79,4 +87,47 @@ public class PlayerController : MovementController
     {
         gameObject.SetActive(true);
     }
+
+    #region Callbacks
+    Vector2 rawMove;
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        rawMove = context.ReadValue<Vector2>();
+    }
+
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        PerformPunch();
+    }
+
+    // private void OnReset(InputAction.CallbackContext context)
+    // {
+    //     OnDisable();
+    //     SceneManager.LoadScene(0);
+    // }
+
+    
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (OnTheGround() || canDoubleJump)
+        {
+            mustJump = true;
+
+            if (hasDoubleJump)
+            {
+                canDoubleJump = !canDoubleJump;
+            }
+        }
+    }
+    
+    private void OnRun(InputAction.CallbackContext context)
+    {
+        mustRun = true;
+    }
+    
+    private void OnRunCanceled(InputAction.CallbackContext context)
+    {
+        mustRun = false;
+    }
+    #endregion
 }
