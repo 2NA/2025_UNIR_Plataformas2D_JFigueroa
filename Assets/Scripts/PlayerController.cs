@@ -11,6 +11,7 @@ public class PlayerController : MovementController
     [SerializeField] float groundDistance = 0.15f;
     [SerializeField] LayerMask jumpable;
     [SerializeField] bool hasDoubleJump = false;
+    [SerializeField] public bool hasKey = false;
 
     [Header("Controls")]
     [SerializeField] InputActionReference move;
@@ -98,6 +99,16 @@ public class PlayerController : MovementController
             case "Double Jump":
                 {
                     hasDoubleJump = true;
+                    break;
+                }
+            case "Key":
+                {
+                    hasKey = true;
+                    break;
+                }
+            case "Goal":
+                {
+                    Debug.Log("Fin del juego");
                     break;
                 }
         }

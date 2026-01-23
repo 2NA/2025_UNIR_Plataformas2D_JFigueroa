@@ -10,8 +10,11 @@ public class ItemController : MonoBehaviour
 
         if (player != null)
         {
-            player.CollectItem(itemType);
-            Destroy(gameObject);
+            if(itemType != "Door" || player.hasKey)
+            {
+                player.CollectItem(itemType);
+                Destroy(gameObject);
+            }
         }
     }
 }
