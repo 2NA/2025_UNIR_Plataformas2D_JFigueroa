@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1989666710079494191, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
@@ -185,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
   affectedTag: Player
-  damage: 20
+  damage: 10
 --- !u!4 &6701245519809394267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7930556170490455429, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}

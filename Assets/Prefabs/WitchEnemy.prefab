@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1989666710079494191, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2488886819523958438, guid: d8ee88d7d7d34052286d9b71638b647a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2
@@ -174,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox2D
   affectedTag: Player
-  damage: 20
+  damage: 10
 --- !u!114 &7153193575703395068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,4 +191,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10e060d5ac7e655c817a955dee3f2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  health: 60
+  health: 30

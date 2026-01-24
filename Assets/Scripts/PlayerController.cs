@@ -78,12 +78,19 @@ public class PlayerController : MovementController
         desiredMove = rawMove;      
     }
 
-    // public override void NotifyHit(HitBox2D hitBox2D)
-    // {
-    //     Debug.Log("Me han dado");
-    //     gameObject.SetActive(false);
-    //     Invoke(nameof(ActivatePlayer), 3f);
-    // }
+    public override void NotifyHit(HitBox2D hitBox2D)
+    {
+        base.NotifyHit(hitBox2D);
+        // gameObject.SetActive(false);
+        // Invoke(nameof(ActivatePlayer), 3f);
+
+        Debug.Log("hit");
+        Animator animator = gameObject.GetComponent<Animator>();
+        if(animator.GetBool("IsDead"))
+        {
+            GameManager.instance.GameOver();
+        }
+    }
 
     private void ActivatePlayer()
     {
